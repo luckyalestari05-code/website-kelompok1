@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile • Luckya Lestari</title>
+
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <!-- STYLE -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background: #f4f7f6;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 20px;
+      }
+
+      /* Navbar */
+      .header {
+        background: #ffffff;
+        border-bottom: 3px solid #007bff;
+        padding: 15px 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 24px;
+        font-weight: 700;
+        color: #007bff;
+      }
+
+      .nav ul {
+        display: flex;
+        list-style: none;
+      }
+
+      .nav ul li {
+        margin-left: 20px;
+      }
+
+      .nav ul li a {
+        text-decoration: none;
+        font-weight: 600;
+        color: #333;
+      }
+
+      .nav ul li a:hover {
+        color: #007bff;
+      }
+
+      /* Hero Section */
+      .main-news {
+        padding: 40px 0;
+      }
+
+      .hero-article {
+        display: flex;
+        background: linear-gradient(to left, rgb(152, 173, 177) 10%, white);
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .hero-content {
+        flex: 2;
+        padding: 30px;
+      }
+
+      .hero-content .category {
+        display: inline-block;
+        background-color: #ffc107;
+        padding: 5px 12px;
+        border-radius: 5px;
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+
+      .hero-content h2 {
+        font-size: 34px;
+      }
+
+      .hero-content p i {
+        margin-right: 6px;
+        color: #007bff;
+      }
+
+      .read-more {
+        display: inline-block;
+        background: #007bff;
+        color: #fff;
+        padding: 10px 18px;
+        border-radius: 6px;
+        margin-top: 20px;
+        font-weight: 600;
+      }
+
+      .read-more:hover {
+        background: #0056b3;
+      }
+
+      .hero-image img {
+        width: 380px;
+        height: 380px;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+        margin: 30px;
+      }
+
+      /* Riwayat Pendidikan */
+      .secondary-news {
+        padding: 20px 0 60px;
+      }
+
+      .secondary-news h2 {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .articles-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+        gap: 25px;
+      }
+
+      .news-card {
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      }
+
+      .news-card .category {
+        display: inline-block;
+        background-color: #28a745;
+        color: white;
+        padding: 3px 8px;
+        border-radius: 5px;
+        font-size: 12px;
+        margin-bottom: 10px;
+      }
+
+      /* Skills */
+      .skills {
+        background: #dce3e2;
+        padding: 40px 0;
+        text-align: center;
+      }
+
+      .skills-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+      }
+
+      .skill-item {
+        padding: 15px 25px;
+        background: #f4f4f4;
+        border-radius: 10px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .skill-item i {
+        font-size: 23px;
+        margin-right: 8px;
+        color: #007bff;
+      }
+
+      .skill-item:hover {
+        background: #007bff;
+        color: #fff;
+      }
+
+      .skill-item:hover i {
+        color: #fff;
+      }
+
+      /* Footer */
+      .footer {
+        background: #333;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        margin-top: 30px;
+      }
+
+      /* Responsif */
+      @media (max-width: 900px) {
+        .hero-article {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .hero-image img {
+          width: 290px;
+          height: 290px;
+          margin: 20px auto;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <h1 class="logo">MY <span style="color:black; font-size: 18px;">Profile</span></h1>
+        <nav class="nav">
+          <ul>
+            <li><a href="#">Beranda</a></li>
+            <li><a href="#riwayat-pendidikan">Riwayat Pendidikan</a></li>
+            <li><a href="#skills">Skills</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <section class="main-news">
+          <article class="hero-article">
+            <div class="hero-content">
+              <span class="category">My Profile</span>
+              <h2>Luckya Lestari</h2>
+              <p><i class="fas fa-map-pin"></i> Lingsar Lobar</p>
+              <p><i class="fa-brands fa-whatsapp"></i> 087801005291</p>
+              <p><i class="fa-solid fa-envelope"></i> Luckya.lestari@gmail.com</p>
+              <p>
+                Saya adalah Mahasiswa S1 Teknologi Informasi di Universitas Teknologi Mataram yang memiliki minat dalam dunia teknologi,
+                desain, dan pengembangan aplikasi web.
+              </p>
+              <a href="#" class="read-more">Baca Selengkapnya →</a>
+            </div>
+
+            <!-- FOTO PROFIL -->
+            <div class="hero-image">
+              <img src="c:\Users\HNLAPTOP\Downloads\WhatsApp Image 2025-12-04 at 08.58.46 (2).jpeg" alt="Foto Profil" />
+            </div>
+          </article>
+        </section>
+
+        <section id="riwayat-pendidikan" class="secondary-news">
+          <h2>Riwayat Pendidikan</h2>
+          <div class="articles-grid">
+            <article class="news-card">
+              <span class="category">SMP</span>
+              <h3>SMPN 2 LINGSAR</h3>
+              <p>(Lulus 2020)</p>
+            </article>
+
+            <article class="news-card">
+              <span class="category">SMA</span>
+              <h3>SMAN 1 LINGSAR</h3>
+              <p>(Lulus 2023)</p>
+            </article>
+
+            <article class="news-card">
+              <span class="category">S1</span>
+              <h3>Universitas Teknologi Mataram</h3>
+              <p>Teknologi Informasi (2025 — Sekarang)</p>
+            </article>
+          </div>
+        </section>
+      </div>
+
+      <section id="skills" class="skills">
+        <div class="container">
+          <h2>My Skills</h2>
+          <div class="skills-grid">
+            <div class="skill-item"><i class="fab fa-html5"></i> HTML & CSS</div>
+            <div class="skill-item"><i class="fab fa-js"></i> JavaScript</div>
+            <div class="skill-item"><i class="fas fa-swimmer"></i> Berenang</div>
+            <div class="skill-item"><i class="fas fa-heart"></i> Make Up</div>
+            <div class="skill-item"><i class="fas fa-utensils"></i> Memasak</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2025 Luckya Lestari.</p>
+    </footer>
+  </body>
+</html>
